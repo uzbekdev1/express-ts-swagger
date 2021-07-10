@@ -1,6 +1,6 @@
 # Introduction
 
-Express, TypeScript, Swagger
+Express, TypeScript, Swagger, Postgresql,Docker
  
 ## Build
  
