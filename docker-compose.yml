@@ -1,0 +1,45 @@
+version: "3"
+
+services:
+  
+  db:
+    image: postgres
+    expose:
+      - "5433"
+    ports:
+      - "5433:5433"
+    command: -p 5433
+    environment: 
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=admin
+    volumes:
+      - my_data:/var/lib/postgresql/data
+    networks: 
+      - my_network
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile 
+    ports:
+      - "8001:8001"
+    volumes:
+      - ./src:/app/src
+    depends_on:
+      - db
+    environment: 
+      - PORT=8001
+      - PG_DB=postgres
+      - PG_USER=postgres
+      - PG_PASSWORD=admin
+      - PG_HOST=db
+      - PG_PORT=5433
+    networks: 
+      - my_network
+
+volumes: 
+  my_data:
+
+networks:
+  my_network:
+    driver: bridge
