@@ -1,6 +1,6 @@
 # Express Swagger
 
-Building REST API with Express, TypeScript, Swagger
+NodeJS Api with Express, TypeScript, Swagger
  
 ## Build
  
