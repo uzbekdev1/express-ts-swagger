@@ -1,8 +1,8 @@
-# Express TypeScript Swagger
+# Express Swagger
 
-Source code for the **Building REST API with Express, TypeScript, Swagger** 
+Building REST API with Express, TypeScript, Swagger
  
-## Build from source
+## Build
  
 1. Install dependencies.
 
@@ -21,15 +21,15 @@ Source code for the **Building REST API with Express, TypeScript, Swagger**
    npm start
    ```
 
-## Build Docker image locally
+## Test
+
+```sh
+npm test
+```
+
+## Docker
 
 ```sh
 docker-compose build
 docker-compose up
-```
-
-## Run tests
-
-```sh
-npm test
 ```
