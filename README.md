@@ -1,6 +1,6 @@
-# Express Swagger
+# Introduction
 
-NodeJS Api with Express, TypeScript, Swagger
+Express, TypeScript, Swagger
  
 ## Build
  
